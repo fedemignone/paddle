@@ -10,9 +10,13 @@ public class Cancha extends EntidadPersistente {
     @Column (name = "esta_iluminada")
     private boolean esta_iluminada;
 
+    @ManyToOne
+    private Color color;
 
-    public Cancha(String nombre, boolean esta_iluminada  ) {
-        this.nombre = nombre;
-        this.esta_iluminada = esta_iluminada;
+
+    public Cancha() {
+        this.nombre = null;
+        this.esta_iluminada = false;
+        this.color = null;
     }
 }

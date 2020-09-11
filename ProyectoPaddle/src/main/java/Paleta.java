@@ -4,15 +4,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "partido")
-public class Partidos extends EntidadPersistente {
+@Table(name = "paleta")
+public class Paleta extends EntidadPersistente{
 
-    @ManyToOne
-    private Cancha cancha;
+    @Column
+    private String nombre;
+
+    @Column
+    private int grosor;
 
     @ManyToOne
     private Color color;
 
     @ManyToOne
-    private Reserva reserva;
+    private Constructor constructor;
 }
